@@ -1,0 +1,89 @@
+.book-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-form h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: lightskyblue;
+}
+
+.book-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.book-form label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #0e4c73;
+}
+
+.book-form input[type="text"],
+.book-form input[type="number"],
+.book-form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.book-form input[type="file"] {
+  padding: 5px;
+}
+
+.book-form .btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.book-form .btn-primary {
+  width: 50%;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: lightskyblue !important;
+  border: none !important;
+  color: white !important;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-form .btn-primary:hover {
+  background-color: #0e4c73 !important;
+}
+
+@media (max-width: 768px) {
+  .book-form {
+    padding: 1.5rem;
+  }
+
+  .book-form h1 {
+    font-size: 1.75rem;
+  }
+
+  .book-form .btn-primary {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-form {
+    padding: 1rem;
+  }
+
+  .book-form h1 {
+    font-size: 1.5rem;
+  }
+
+  .book-form .btn-primary {
+    width: 100%;
+  }
+}
