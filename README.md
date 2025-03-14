@@ -34,3 +34,19 @@ Clone the repository to your local machine:
 git clone https://github.com/razanalbitar/DjangoProject.git
 cd DjangoProject
 ```
+
+Backend Setup:
+
+1. Navigate to the backend directory using `cd library_backend`.
+2. Create a virtual environment with `python -m venv venv`.
+3. Activate the virtual environment using `source venv/bin/activate` on macOS/Linux or `venv\Scripts\activate` on Windows.
+4. Install dependencies by running `pip install -r requirements.txt`.
+5. Open the `settings.py` file in your Django project and configure the database settings under the `DATABASES` section. Set the `NAME`, `USER`, `PASSWORD`, `HOST`, and `PORT` for your PostgreSQL database.
+6. Run migrations using `python manage.py migrate`.
+7. Start the backend server with `python manage.py runserver`.
+
+Frontend Setup:
+
+1. Navigate to the frontend directory using `cd ../library_frontend`.
+2. Install dependencies by running `npm install`.
+3. Start the frontend server using `npm start`.

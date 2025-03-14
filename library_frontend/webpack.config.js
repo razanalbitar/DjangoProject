@@ -2,40 +2,40 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js", // Entry point for your React app
+  entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"), // Output directory
-    filename: "bundle.js", // Output bundle file name
-    publicPath: "/", // Base path for all assets
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+    publicPath: "/",
   },
   module: {
     rules: [
       {
-        test: /\.js$/, // Transpile all .js files
-        exclude: /node_modules/, // Exclude node_modules
+        test: /\.js$/,
+        exclude: /node_modules/,
         use: {
-          loader: "babel-loader", // Use Babel for transpiling
+          loader: "babel-loader",
         },
       },
       {
-        test: /\.css$/, // Handle CSS files
+        test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i, // Handle image files
+        test: /\.(png|jpe?g|gif|svg)$/i,
         type: "asset/resource",
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./public/index.html", // Use this HTML template
+      template: "./public/index.html",
     }),
   ],
   devServer: {
-    historyApiFallback: true, // Enable client-side routing
-    static: path.resolve(__dirname, "dist"), // Serve files from the dist folder
-    port: 3000, // Port for the dev server
-    open: true, // Open the browser automatically
+    historyApiFallback: true,
+    static: path.resolve(__dirname, "dist"),
+    port: 3001,
+    open: true,
   },
 };
